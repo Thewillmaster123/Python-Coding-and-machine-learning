@@ -40,7 +40,16 @@ elif int(age) <=12:
   print(username +" you are not old enough to view this site")
 else int(age) >= 99:
   print(username + "how are you even operating the computer")
+age =15
+if age >= 100:
+  print("account invalid")
+elif age >= 13: # 100 > age >=13
+  print("account active")
+else:
+  print("too young")
 
-
+#true if both are >10
+if not age >=10 or age2 >=10
+print("example")
 
 
