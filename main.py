@@ -1,108 +1,57 @@
-print("Williams")
-number_of_doughnuts = 5
-number_of_doughnuts ="f"
-number_of_doughnuts = True
-number_of_doughnuts = 5.5
-print(number_of_doughnuts)
-doughnut_name = "Glaze"
-name = "Hello"
-doughnut_name = "name"
+import random
 
-print(doughnut_name)
+rand_num = random.randint(1,3)
 
-Doughnut_exist = True
-amount_of_food = 10
-print(amount_of_food + number_of_doughnuts)
-
-amount_of_food -= 1
-amount_of_food = amount_of_food - 1
-if number_of_doughnuts == 0:
- Doughnut_exist = False
-elif number_of_doughnuts >=5:
-  number_of_doughnuts -=1
+if rand_num == 1:
+  print("low roll")
+elif rand_num ==2:
+  print("average")
 else:
-  number_of_doughnuts += 1
+  print("high roll")
 
-Life = 50
-if Life == 0:
-  print("you have died")
+def random_number(max_int):
+  rand = random.randint(0,max_int)
+  return(rand)
+
+
+num = random_number(100)
+print(num)
+
+def roll ():#function decleration
+  roll_value = random.randint(1,20)#fuction body
+  return(roll_value)#function body
+
+my_roll = roll()
+if my_roll == 1:
+  print("sucks to suck")
+elif my_roll <=10:
+  print("something average")
+elif my_roll < 20:
+  print("something good")
 else:
-  Life -= 1
-print(Life)
+  print("you are the the bomb")
+
+def roll2():
+  roll_value = random.randint(1,20)
+  if my_roll == 1:
+   return "not so bad"
+  elif my_roll ==10:
+   return "something average"
+  elif my_roll < 20:
+    return "something good"
+  else:
+    return "you won the loterry"
+
+text = roll2()
 
 
-print("create a username")
-username = input("what is yourname:\n ")
-age = input("Hello " + username+", how old are you?\n" )
-if int(age)>12 and int(age)<99:
-  print(username + "welcome to the site" )
-elif int(age) <=12:
-  print(username + "you are not old enough to view this site" )
-else:
-  print(username + "how are you even operating the computer" )
-
-if int(age) >= 99:
-  print("account invalid")
-elif int(age) >= 13: # 100 > age >=13
-  print("account active")
-else:
-  print("too young")
 
 
- 
-
-a=3
-b=6
-if a>b:
-  print("a is greater than b")
-
-x = 2 
-print(x) 
-if x > 3:
-  x += 2
-print(x)
-
-has_key = True 
-if has_key == True:
-  print("You won! Unlock the door!") 
-
-player_age = 22
-
-if player_age >= 21:
-  print("You could be a teacher")
-elif player_age >= 18:
-  print("You could be in college.")
-elif player_age >= 13:
-  print("You can also attend iD Academies!")
-elif player_age >= 7:
-  print("You can attend iD Tech Camps!")
-else:
-  print("You're young.")
-
-player_has_item = True
-score = 150
-won = False
-
-if player_has_item and score > 100:
-    won = True
-
-if not won:
-    print("You haven't beaten the game yet.")
-elif won:
-    print("You won the game!")
 
 
-player_has_item = False
-score = 202
-won = False
 
-if player_has_item or score > 200:
-    won = True
 
-if not won:
-    print("You haven't beaten the game yet.")
-elif won:
-    print("You won the game!")
+
 
 
 
@@ -111,3 +60,31 @@ x = 0
 while x <= 10:
   print(x)
   x += 1
+
+num_to_guess = 50
+num_attempt = 1
+guess = int(input("pick number between 0 and 100: "))
+
+while not num_to_guess == guess:
+  if guess > num_to_guess:#the condition
+    guess = int(input("Too High.Guess Again"))#loop body
+  elif guess < num_to_guess:
+    guess = int(input("Too Low. Guess Again"))
+  num_attempt += 1
+
+print("you got it right" + str(num_attempt) + "attempts") 
+
+num_viruses = 15
+
+for x in range(0,num_viruses):
+  print(str(x) + "viruses have been deleted")
+
+
+num_outputs = int(input("any number"))
+num_divisible = int(input("any number i should test"))
+
+
+
+for x in range(1, num_outputs + 1 ):
+  print (x * num_divisible )
+
