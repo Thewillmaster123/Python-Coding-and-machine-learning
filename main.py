@@ -34,14 +34,14 @@ print(Life)
 print("create a username")
 username = input("what is yourname:\n ")
 age = input("Hello " + username+", how old are you?\n" )
-if int(age) >= 13:
+if int(age) >=13:
   print(username + "welcome to the site" )
 elif int(age) <=12:
   print(username + "you are not old enough to view this site" )
 elif int(age) >=99:
   print(username + "how are you even operating the computer" )
-age =15
-if age >= 100:
+
+if int(age) >= 100:
   print("account invalid")
 elif age >= 13: # 100 > age >=13
   print("account active")
@@ -49,5 +49,11 @@ else:
   print("too young")
 
 
+ 
+
+a=6
+b=3
+if a>b:
+  print("a is greater than b")
 
 
