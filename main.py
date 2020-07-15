@@ -88,3 +88,15 @@ num_divisible = int(input("any number i should test"))
 for x in range(1, num_outputs + 1 ):
   print (x * num_divisible )
 
+is_checked = 0
+if is_checked:
+  print("Hello there!")
+
+def dice_roll(d20):
+  if d20 == True:
+    return random.randint(1,20)
+  else:
+    return random.randint(1,6)
+
+number = dice_roll(True)
+print(number)
