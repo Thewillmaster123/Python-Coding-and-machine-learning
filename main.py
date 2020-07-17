@@ -1,102 +1,57 @@
-import random
+class MyPet:
+  def __init__(self,pet_species, pet_name, pet_age):
+    self.species =pet_species
+    self.name = pet_name
+    self.age = pet_age
 
-rand_num = random.randint(1,3)
-
-if rand_num == 1:
-  print("low roll")
-elif rand_num ==2:
-  print("average")
-else:
-  print("high roll")
-
-def random_number(max_int):
-  rand = random.randint(0,max_int)
-  return(rand)
-
-
-num = random_number(100)
-print(num)
-
-def roll ():#function decleration
-  roll_value = random.randint(1,20)#fuction body
-  return(roll_value)#function body
-
-my_roll = roll()
-if my_roll == 1:
-  print("sucks to suck")
-elif my_roll <=10:
-  print("something average")
-elif my_roll < 20:
-  print("something good")
-else:
-  print("you are the the bomb")
-
-def roll2():
-  roll_value = random.randint(1,20)
-  if my_roll == 1:
-   return "not so bad"
-  elif my_roll ==10:
-   return "something average"
-  elif my_roll < 20:
-    return "something good"
-  else:
-    return "you won the loterry"
-
-text = roll2()
+  
 
 
 
+class Alien:
+  def __init__(self,Alien_species, Alien_name, num_arms):
+    self.species =Alien_species
+    self.name = Alien_name
+    self.arms = int(num_arms)
+
+  def high_five(self):
+    for x in range(0,self.arms):
+      print(self.name + "gives you a high five")
+
+Blue_Alien = Alien("Green_Alien","josh", 2 )
+print(Blue_Alien.name)
+Blue_Alien.high_five()
+
+class Human(Alien):
+  def __init__(self,human_name,region_lived_in):
+    self.name =human_name
+    self.species = "Human"
+    self.arms = 2
+    self.region = region_lived_in
+
+  def talk(self,speech):
+    print(speech)
+
+Jeff = Human("jeff","united States")
+Jeff.talk("Hello,I'm Jeff")
+
+class Dog(MyPet):
+  def __init__(self, dog_age, dog_name):
+    self.species = "dog"
+    self.age = dog_age
+    self.name = dog_name
 
 
+  def play_fetch(self):
+   print("Your pet" + self.name + "seems happy to play fetch")
 
+Ralph = Dog(2,"Ralph")
+Ralph.play_fetch()
 
 
 
 
 
 
-x = 0
 
-while x <= 10:
-  print(x)
-  x += 1
-
-num_to_guess = 50
-num_attempt = 1
-guess = int(input("pick number between 0 and 100: "))
-
-while not num_to_guess == guess:
-  if guess > num_to_guess:#the condition
-    guess = int(input("Too High.Guess Again"))#loop body
-  elif guess < num_to_guess:
-    guess = int(input("Too Low. Guess Again"))
-  num_attempt += 1
-
-print("you got it right" + str(num_attempt) + "attempts") 
-
-num_viruses = 15
-
-for x in range(0,num_viruses):
-  print(str(x) + "viruses have been deleted")
-
-
-num_outputs = int(input("any number"))
-num_divisible = int(input("any number i should test"))
-
-
-
-for x in range(1, num_outputs + 1 ):
-  print (x * num_divisible )
-
-is_checked = 0
-if is_checked:
-  print("Hello there!")
-
-def dice_roll(d20):
-  if d20 == True:
-    return random.randint(1,20)
-  else:
-    return random.randint(1,6)
-
-number = dice_roll(True)
-print(number)
+    
